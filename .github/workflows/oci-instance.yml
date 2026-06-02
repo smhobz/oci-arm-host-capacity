@@ -1,7 +1,7 @@
 name: OCI ARM Instance Creator
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/10 * * * *' # Runs every 10 minutes
   workflow_dispatch:
 jobs:
   create-instance:
@@ -19,4 +19,4 @@ jobs:
           OCI_USER_ID: ${{ secrets.OCI_USER_ID }}
           OCI_TENANCY_ID: ${{ secrets.OCI_TENANCY_ID }}
           OCI_KEY_FINGERPRINT: ${{ secrets.OCI_FINGERPRINT }}
-          OCI_PRIVATE_KEY: ${{ secrets.OCI_PRIVATE_KEY }
+          OCI_PRIVATE_KEY: ${{ secrets.OCI_PRIVATE_KEY }}
