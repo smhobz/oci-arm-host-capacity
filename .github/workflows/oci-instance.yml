@@ -8,13 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.1'
+          
       - name: Install dependencies
         run: composer install --no-dev
+        
       - name: Run instance creator
+        run: php index.php # Scripti çalıştıracak ana komut (Gerekirse dosya adını düzenleyin)
         env:
           OCI_USER_ID: ${{ secrets.OCI_USER_ID }}
           OCI_TENANCY_ID: ${{ secrets.OCI_TENANCY_ID }}
