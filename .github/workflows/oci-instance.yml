@@ -34,4 +34,4 @@ jobs:
           OCI_MEMORY_IN_GBS: "24"
           OCI_COMPARTMENT_ID: ${{ secrets.OCI_TENANCY_ID }}
           OCI_IMAGE_ID: "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaam5dfw6wubrshstsc27hcewh7b6s6q2ofgphzizqgnoipxnyu57pa"
-        run: php run.php
+       run: php index.php
